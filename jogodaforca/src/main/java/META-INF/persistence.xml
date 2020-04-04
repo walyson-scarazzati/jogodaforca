@@ -1,0 +1,45 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+     http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+    version="2.0">
+
+ <persistence-unit name="livraria">
+
+   <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+   <class>pt.jogodaforca.model.Palavra</class>
+   <class>pt.jogodaforca.model.Dificuldade</class>
+   <class>pt.jogodaforca.model.Categoria</class>
+
+   <properties>
+    
+<!--   SEM as propriedades URL, login, senha e driver -->
+
+  <property name="hibernate.dialect" 
+      value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+  <property name="hibernate.show_sql" value="true" />
+  <property name="hibernate.format_sql" value="true" />
+  <property name="hibernate.hbm2ddl.auto" value="update" />    
+   </properties>
+ </persistence-unit> 
+
+ <!-- <persistence-unit name="usuarios">
+
+   <provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+   <class>br.com.caelum.tarefas.model.Usuario</class>
+
+   <properties>
+    
+  SEM as propriedades URL, login, senha e driver
+
+  <property name="hibernate.dialect" 
+      value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+  <property name="hibernate.show_sql" value="true" />
+  <property name="hibernate.format_sql" value="true" />
+  <property name="hibernate.hbm2ddl.auto" value="update" />    
+   </properties>
+ </persistence-unit>  -->
+
+</persistence>
