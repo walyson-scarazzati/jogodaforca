@@ -21,7 +21,7 @@ public class Connect {
 		Connection connection = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jogodaforca?useSSL=false&createDatabaseIfNotExist=true", "root", "123456");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jogodaforca?useSSL=false", "root", "123456");
 		} catch (Exception e) {
 			System.out.println(e);
 		}

@@ -53,12 +53,20 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- Hibernate Persistence -->
+<!-- Hibernate Core -->
 		<dependency>
-			<groupId>org.hibernate.javax.persistence</groupId>
-			<artifactId>hibernate-jpa-2.1-api</artifactId>
-			<version>1.0.0.Final</version>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.4.30.Final</version> <!-- Use a compatible version -->
 		</dependency>
+
+		<!-- Hibernate JPA API -->
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>javax.persistence-api</artifactId>
+			<version>2.2</version> <!-- Match with Hibernate version -->
+		</dependency>
+
 
 		<!-- jUnit -->
 		<dependency>
@@ -75,14 +83,14 @@
 			<version>2.5</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<!-- Tomcat -->
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-servlet-api</artifactId>
 			<version>8.5.0</version>
 		</dependency>
-		
+
 		<!-- Spring Security -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
@@ -111,7 +119,7 @@
 			<artifactId>guava</artifactId>
 			<version>18.0</version>
 		</dependency>
-		
+
 		<!-- spring-context-support -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -147,7 +155,7 @@
 			</exclusions>
 		</dependency>
 
-	<!-- Mockito -->
+		<!-- Mockito -->
 	<dependency>
 		<groupId>org.mockito</groupId>
 		<artifactId>mockito-core</artifactId>
@@ -155,6 +163,11 @@
 		<scope>test</scope>
 	</dependency>
 
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
 
 	</dependencies>
 

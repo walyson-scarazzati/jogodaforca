@@ -39,7 +39,7 @@ public class CategoriaDAO {
 		List<Categoria> categorias = new ArrayList<Categoria>();
 		try {
 			Categoria categoria = null;
-			String query = "select * from categorias";
+			String query = "select * from categoria";
 			ps = connection.prepareStatement(query);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {

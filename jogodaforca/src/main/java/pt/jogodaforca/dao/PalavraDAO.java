@@ -42,7 +42,7 @@ public class PalavraDAO {
 		List<Palavra> palavras = new ArrayList<Palavra>();
 		try {
 			Palavra palavra = null;
-			String query = "select * from palavras AS p INNER JOIN dificuldade AS d ON p.dificuldade_id = d.id INNER JOIN palavra_categoria AS pc ON p.id = pc.palavra_id INNER JOIN categoria c ON c.id = pc.categoria_id where"
+			String query = "select * from palavra AS p INNER JOIN dificuldade AS d ON p.dificuldade_id = d.id INNER JOIN palavra_categoria AS pc ON p.id = pc.palavra_id INNER JOIN categoria c ON c.id = pc.categoria_id where"
 					+ " d.id =" + dificuldade_id + " and c.id=" + categoria_id;
 			ps = connection.prepareStatement(query);
 			ResultSet rs = ps.executeQuery();

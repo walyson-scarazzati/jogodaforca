@@ -39,7 +39,7 @@ public class DificuldadeDAO {
 		List<Dificuldade> dificuldades = new ArrayList<Dificuldade>();
 		try {
 			Dificuldade dificuldade = null;
-			String query = "select * from dificuldades";
+			String query = "select * from dificuldade";
 			ps = connection.prepareStatement(query);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
